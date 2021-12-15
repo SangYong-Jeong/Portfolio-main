@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from '../../style';
 
-import Logo from '../../assets/img/증명사진.jpg';
+// import Logo from '../../assets/img/증명사진.jpg';
+import Logo from '../../assets/img/marathon.png';
 
 const ImgWrapper = styled.div`
   width: 150px;

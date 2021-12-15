@@ -33,7 +33,6 @@ export const media = {
 };
 
 export const font = {
-  kr: `'Noto Sans KR', sans-serif`,
-  en: `'Quicksand', sans-serif`,
-  name: `'Playfair Display', serif`,
+  content: `'Quicksand', sans-serif`,
+  title: `'Playfair Display', serif`,
 };

@@ -3,6 +3,7 @@ import styled, { color } from '../../style';
 
 const Wrapper = styled.li`
   margin-bottom: 2em;
+  font
 `;
 const Navi = styled.a`
   position: relative;

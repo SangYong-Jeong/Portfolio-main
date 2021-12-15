@@ -2,6 +2,7 @@ import React from 'react';
 import styled from '../style';
 
 import NaviWrapper from '../components/navi/NaviWrapperCp';
+import ContentWrapperCp from '../components/ContentWrapperCp';
 
 const Wrapper = styled.div`
   max-width: 1170px;
@@ -9,15 +10,11 @@ const Wrapper = styled.div`
   position: relative;
 `;
 
-const ContentWrapper = styled.div`
-  width: calc(100% - 300px);
-`;
-
 const Main = () => {
   return (
     <Wrapper>
       <NaviWrapper />
-      <ContentWrapper />
+      <ContentWrapperCp />
     </Wrapper>
   );
 };

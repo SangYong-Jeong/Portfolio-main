@@ -4,7 +4,7 @@ import styled, { font } from '../../style';
 import NaviCp from './NaviCp';
 
 const Wrapper = styled.ul`
-  font-family: ${font.en};
+  font-family: ${font.content};
   font-size: 0.875em;
   font-weight: 400;
 `;

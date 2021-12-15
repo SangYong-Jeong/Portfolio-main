@@ -17,14 +17,14 @@ const Wrapper = styled.aside`
 `;
 
 const Name = styled.h1`
-  font-family: ${font.name};
+  font-family: ${font.title};
   font-size: 1.25em;
   font-weight: 500;
   margin-bottom: 0.5em;
 `;
 
 const Position = styled.div`
-  font-family: ${font.en};
+  font-family: ${font.content};
   color: ${color.primary};
   font-size: 0.875em;
   margin-bottom: 2em;
