@@ -5,15 +5,21 @@ import AboutSkillCp from './AboutSkillCp';
 
 const Wrapper = styled.div`
   display: flex;
+  flex-wrap: wrap;
 `;
 
 const AboutSkillWrapperCp = () => {
   return (
     <Wrapper>
+      <AboutSkillCp type="html5" color={color.danger} content="HTML5" />
+      <AboutSkillCp type="css3-alt" color={color.indigo} content="CSS3" />
       <AboutSkillCp type="js" color={color.warning} content="JavaScript" />
       <AboutSkillCp type="node" color={color.success} content="Nodejs" />
+      <AboutSkillCp type="database" color={color.grey} content="MySQL" />
       <AboutSkillCp type="vuejs" color={color.purple} content="Vuejs" />
       <AboutSkillCp type="react" color={color.primary} content="ReactJs" />
+      <AboutSkillCp type="github" color={color.black} content="Github" />
+      <AboutSkillCp type="aws" color={color.indigo} content="AWS" />
     </Wrapper>
   );
 };

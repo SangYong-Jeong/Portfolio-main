@@ -5,6 +5,7 @@ import AboutSkillWrapperCp from './AboutSkillWrapperCp';
 
 const Wrapper = styled.section`
   padding: 3em;
+  margin-bottom: 5em;
 `;
 
 const Index = styled.span`
@@ -16,8 +17,9 @@ const Index = styled.span`
 `;
 
 const Title = styled.h2`
+  letter-spacing: 3px;
   font-family: ${font.title};
-  font-size: 1.5em;
+  font-size: 1.25em;
   font-weight: 700;
   margin-bottom: 2em;
 `;

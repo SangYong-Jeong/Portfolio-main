@@ -3,9 +3,9 @@ import styled, { color, font } from '../../style';
 
 const Wrapper = styled.div`
   background-color: ${color.white};
-  width: 25%;
-  padding: 2.5%;
-  margin: 0 0.5em;
+  width: 22%;
+  padding: 3.5%;
+  margin: 0 0.5em 1em 0.5em;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
   border: 2px solid ${(props) => props.color};
 `;
@@ -28,7 +28,11 @@ const AboutSkillCp = ({ type, color, content }) => {
   return (
     <Wrapper color={color}>
       <IconWrap>
-        <Icon color={color} className={`fab fa-${type}`}></Icon>
+        {type === 'database' ? (
+          <Icon color={color} className={`fas fa-${type}`}></Icon>
+        ) : (
+          <Icon color={color} className={`fab fa-${type}`}></Icon>
+        )}
       </IconWrap>
       <Content>{content}</Content>
     </Wrapper>
