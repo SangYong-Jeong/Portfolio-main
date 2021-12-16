@@ -26,31 +26,32 @@ const Title = styled.h2`
 
 const Wrap = styled.div`
   display: flex;
+  flex-wrap: wrap;
 `;
 
 const datas = [
   {
     id: 1,
-    icon: '',
-    content: '',
+    icon: 'far fa-envelope',
+    content: 'sangyong9501@gmail.com',
     margin: true,
   },
   {
     id: 2,
-    icon: '',
-    content: '',
+    icon: 'fas fa-map-marker-alt',
+    content: '서울시 구로구 가리봉동',
     margin: false,
   },
   {
     id: 3,
-    icon: '',
-    content: '',
+    icon: 'fas fa-phone-alt',
+    content: '+82 10 4564 9145',
     margin: true,
   },
   {
     id: 4,
-    icon: '',
-    content: '',
+    icon: 'fab fa-github',
+    content: 'https://github.com/SangYong-Jeong',
     margin: false,
   },
 ];
@@ -61,7 +62,9 @@ const ContactWrapperCp = () => {
       <Index>GET IN TOUCH</Index>
       <Title>CONTACT</Title>
       <Wrap>
-        <ContactCp />
+        {datas.map((data) => (
+          <ContactCp key={data.id} {...data} />
+        ))}
       </Wrap>
     </Wrapper>
   );
