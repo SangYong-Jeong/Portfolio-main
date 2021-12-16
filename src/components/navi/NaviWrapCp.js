@@ -15,6 +15,7 @@ const NaviWrapCp = () => {
       <NaviCp type="About" />
       <NaviCp type="Tech Skills" />
       <NaviCp type="Projects" />
+      <NaviCp type="Contact" />
     </Wrapper>
   );
 };

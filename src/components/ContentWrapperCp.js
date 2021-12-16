@@ -4,6 +4,7 @@ import styled from '../style';
 import AboutCp from './about/AboutCp';
 import SkillsCp from './skills/SkillsCp';
 import ProjectsWrapperCp from './projects/ProjectsWrapperCp';
+import ContactWrapperCp from './contact/ContactWrapperCp';
 
 const Wrapper = styled.div`
   width: calc(100% - 300px);
@@ -18,6 +19,7 @@ const ContentWrapperCp = () => {
       <AboutCp />
       <SkillsCp />
       <ProjectsWrapperCp />
+      <ContactWrapperCp />
     </Wrapper>
   );
 };
