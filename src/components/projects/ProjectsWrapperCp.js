@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import styled, { color, font } from '../../style';
+import { useDispatch } from 'react-redux';
+import { projects } from '../../modules/height';
 
 import ProjectsCp from './ProjectsCp';
 
@@ -155,8 +157,15 @@ const HighLight = styled.div`
 `;
 
 const ProjectsWrapperCp = () => {
+  const dispatch = useDispatch();
+  const wrapper = useRef('');
+  useEffect(() => {
+    dispatch(
+      projects(window.pageYOffset + wrapper.current.getBoundingClientRect().top)
+    );
+  }, [dispatch]);
   return (
-    <Wrapper>
+    <Wrapper ref={wrapper}>
       <Index>MY WORK</Index>
       <Title>PROJECTS</Title>
       <ContentTitle>

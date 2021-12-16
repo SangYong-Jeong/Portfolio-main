@@ -12,10 +12,10 @@ const Wrapper = styled.ul`
 const NaviWrapCp = () => {
   return (
     <Wrapper>
-      <NaviCp type="About" />
-      <NaviCp type="Tech Skills" />
-      <NaviCp type="Projects" />
-      <NaviCp type="Contact" />
+      <NaviCp type="About" offset="about" />
+      <NaviCp type="Tech Skills" offset="skills" />
+      <NaviCp type="Projects" offset="projects" />
+      <NaviCp type="Contact" offset="contact" />
     </Wrapper>
   );
 };

@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import styled, { color, font } from '../../style';
+import { useDispatch } from 'react-redux';
+import { contact } from '../../modules/height';
 
 const Wrapper = styled.div`
   width: 50%;
@@ -33,8 +35,15 @@ const ContentWrap = styled.div`
 `;
 
 const ContactCp = ({ icon, content, margin }) => {
+  const dispatch = useDispatch();
+  const wrapper = useRef('');
+  useEffect(() => {
+    dispatch(
+      contact(window.pageYOffset + wrapper.current.getBoundingClientRect().top)
+    );
+  }, [dispatch]);
   return (
-    <Wrapper margin={margin}>
+    <Wrapper margin={margin} ref={wrapper}>
       <IconWrap>
         <Icon className={icon} />
       </IconWrap>

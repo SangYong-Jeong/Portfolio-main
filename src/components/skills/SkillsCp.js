@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import styled, { color, font } from '../../style';
+import { useDispatch } from 'react-redux';
+import { skills } from '../../modules/height';
 
 import ProgressWrapperCp from './ProgressWrapperCp';
 
@@ -32,8 +34,15 @@ const Content = styled.p`
 `;
 
 const SkillsCp = () => {
+  const dispatch = useDispatch();
+  const wrapper = useRef('');
+  useEffect(() => {
+    dispatch(
+      skills(window.pageYOffset + wrapper.current.getBoundingClientRect().top)
+    );
+  }, [dispatch]);
   return (
-    <Wrapper>
+    <Wrapper ref={wrapper}>
       <Index>TECH SKILLS</Index>
       <Title>"저는 지금 이것들을 할 수 있습니다."</Title>
       <Content>

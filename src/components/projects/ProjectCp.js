@@ -77,7 +77,7 @@ const ProjectCp = ({ title, content, src, margin, domain }) => {
         <ContentTitle className="content-title">{title}</ContentTitle>
         <Content className="content">{content}</Content>
         <ButtonWrap>
-          <Button href={domain} className="btn btn-sm">
+          <Button target="_blank" href={domain} className="btn btn-sm">
             <i className="fas fa-eye"></i>&nbsp;&nbsp;
             <Span>Detail</Span>
           </Button>

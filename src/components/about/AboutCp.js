@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import styled, { color, font } from '../../style';
+import { useDispatch } from 'react-redux';
+import { about } from '../../modules/height';
 
 import AboutSkillWrapperCp from './AboutSkillWrapperCp';
 
@@ -57,8 +59,15 @@ const Span = styled.span`
 `;
 
 const AboutCp = () => {
+  const dispatch = useDispatch();
+  const wrapper = useRef('');
+  useEffect(() => {
+    dispatch(
+      about(window.pageYOffset + wrapper.current.getBoundingClientRect().top)
+    );
+  }, [dispatch]);
   return (
-    <Wrapper>
+    <Wrapper ref={wrapper}>
       <Index>ABOUT ME</Index>
       <Title>"늘 성장하려고 노력하는 개발자"</Title>
       <ContentTitle>
