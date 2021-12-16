@@ -7,10 +7,10 @@
 
    - About -> 완료!
    - Tech Skills -> 완료!
-   - Projects
+   - Projects -> 완료!
 
 3. 메인 페이지 내용 구성 후 추가적으로 고려해볼만한 내용
 
 - Main Banner
-- Contact
+- Contact -> 완료!
 - Footer
