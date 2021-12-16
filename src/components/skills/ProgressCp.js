@@ -1,31 +1,37 @@
 import React from 'react';
 import ProgressBar from 'react-bootstrap/ProgressBar';
-import styled, { color } from '../../style';
+import styled, { color, font } from '../../style';
 
 const Wrapper = styled.div`
   padding: 0 1%;
-  width: 50%;
+  width: 48%;
   margin-bottom: 1em;
 `;
 
-const Title = styled.h3``;
+const Title = styled.h3`
+  font-family: ${font.content};
+  font-weight: 600;
+  margin-bottom: 1em;
+`;
 
-const ProgressCp = ({ title, now, color }) => {
+const StyledProgressBar = styled(ProgressBar)`
+  margin-bottom: 2em;
+`;
+
+const Content = styled.p`
+  font-family: ${font.content};
+  font-size: 0.875em;
+  line-height: 1.75;
+`;
+
+const ProgressCp = ({ title, now, color, content, className }) => {
   return (
-    <Wrapper>
+    <Wrapper className={className}>
       <Title>{title}</Title>
-      <ProgressBar
-        animated
-        striped
-        now={now}
-        label={`${now}%`}
-        variant={color}
-      />
+      <StyledProgressBar animated striped now={now} variant={color} />
+      <Content>&nbsp;&nbsp;{content}</Content>
     </Wrapper>
   );
 };
 
 export default ProgressCp;
-
-// yarn bootstrap module 이용해서 progress bar 구현
-// variant => success, info, danger, warning

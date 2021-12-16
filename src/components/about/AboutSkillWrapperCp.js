@@ -19,6 +19,7 @@ const AboutSkillWrapperCp = () => {
       <AboutSkillCp type="vuejs" color={color.purple} content="Vuejs" />
       <AboutSkillCp type="react" color={color.primary} content="ReactJs" />
       <AboutSkillCp type="github" color={color.black} content="Github" />
+      <AboutSkillCp type="sass" color={color.purple} content="Scss" />
       <AboutSkillCp type="aws" color={color.indigo} content="AWS" />
     </Wrapper>
   );

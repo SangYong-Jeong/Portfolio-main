@@ -28,7 +28,7 @@ const Content = styled.p`
   font-family: ${font.content};
   font-size: 1em;
   line-height: 2;
-  margin-bottom: 2em;
+  margin-bottom: ${(props) => (props.mb ? props.mb : '2em')};
 `;
 
 const SkillsCp = () => {
@@ -47,7 +47,7 @@ const SkillsCp = () => {
         배포시에는 AWS를 통해 ec2를 활용한 배포 및 certbot을 이용한 인증서
         설치와 router53을 통한 서브 도메인 설정을 해봤습니다.
       </Content>
-      <Content>
+      <Content mb={'5em'}>
         &nbsp;&nbsp;이후 Front 프레임워크인 Vuejs와 Reactjs를 학습했고 이를
         이용해 날씨앱 및 쇼핑몰을 구현하면서 Vuex, VueRouter, Redux,
         React-router-dom 등 여러 모듈들을 이용해 데이터를 핸들링하고
