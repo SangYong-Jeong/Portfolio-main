@@ -4,7 +4,7 @@ import styled, { color, font } from '../../style';
 import AboutSkillWrapperCp from './AboutSkillWrapperCp';
 
 const Wrapper = styled.section`
-  padding: 3em;
+  padding: 2em;
   margin-bottom: 5em;
 `;
 
@@ -38,6 +38,24 @@ const ContentAbout = styled.p`
   margin-bottom: 2em;
 `;
 
+const HightLight = styled.div`
+  padding: 1.25em 1.5em;
+  font-family: ${font.title};
+  background-color: ${color.warning};
+  font-size: 1.5em;
+  line-height: 1.5;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+`;
+
+const Span = styled.span`
+  display: inline-block;
+  padding: 0.35em;
+  font-size: 0.75em;
+  margin-top: 1em;
+  border: 1px solid ${color.black};
+  font-weight: 800;
+`;
+
 const AboutCp = () => {
   return (
     <Wrapper>
@@ -58,6 +76,12 @@ const AboutCp = () => {
         </strong>
       </ContentAbout>
       <AboutSkillWrapperCp />
+      <HightLight>
+        전공과 전혀 무관하기에 <br /> 더 열심히 했고 앞으로도 열심히 할
+        것입니다.
+        <br />
+        <Span>앞으로 뛰어난 풀스택 개발자가 되고 싶습니다.</Span>
+      </HightLight>
     </Wrapper>
   );
 };

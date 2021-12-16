@@ -13,6 +13,7 @@ export const color = {
   purple: '#A84CB8',
   success: '#2FA499',
   indigo: '#4054B2',
+  sky: '#96CCCC',
 };
 
 export const size = {

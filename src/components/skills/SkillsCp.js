@@ -4,7 +4,7 @@ import styled, { color, font } from '../../style';
 import ProgressWrapperCp from './ProgressWrapperCp';
 
 const Wrapper = styled.section`
-  padding: 3em;
+  padding: 2em;
   margin-bottom: 10em;
 `;
 

@@ -1,8 +1,9 @@
 import React from 'react';
-import styled, { color } from '../style';
+import styled from '../style';
 
 import AboutCp from './about/AboutCp';
 import SkillsCp from './skills/SkillsCp';
+import ProjectsWrapperCp from './projects/ProjectsWrapperCp';
 
 const Wrapper = styled.div`
   width: calc(100% - 300px);
@@ -16,6 +17,7 @@ const ContentWrapperCp = () => {
     <Wrapper>
       <AboutCp />
       <SkillsCp />
+      <ProjectsWrapperCp />
     </Wrapper>
   );
 };

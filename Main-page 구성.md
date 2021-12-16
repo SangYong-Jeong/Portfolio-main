@@ -5,8 +5,8 @@
 
 2. 메인 페이지 내용 구성
 
-   - About
-   - Tech Skills
+   - About -> 완료!
+   - Tech Skills -> 완료!
    - Projects
 
 3. 메인 페이지 내용 구성 후 추가적으로 고려해볼만한 내용

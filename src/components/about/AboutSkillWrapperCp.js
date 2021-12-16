@@ -6,6 +6,7 @@ import AboutSkillCp from './AboutSkillCp';
 const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 5em;
 `;
 
 const AboutSkillWrapperCp = () => {
