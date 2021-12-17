@@ -41,7 +41,7 @@ const datas = [
     margin: true,
     aos: {
       aos: 'fade-left',
-      offset: '500',
+      offset: '300',
       duration: '1000',
     },
   },
@@ -52,7 +52,7 @@ const datas = [
     margin: false,
     aos: {
       aos: 'fade-right',
-      offset: '500',
+      offset: '300',
       duration: '1000',
     },
   },
@@ -63,7 +63,7 @@ const datas = [
     margin: true,
     aos: {
       aos: 'fade-up',
-      offset: '500',
+      offset: '100',
       duration: '1000',
     },
   },
@@ -74,7 +74,7 @@ const datas = [
     margin: false,
     aos: {
       aos: 'fade-up',
-      offset: '500',
+      offset: '0',
       duration: '1000',
     },
   },

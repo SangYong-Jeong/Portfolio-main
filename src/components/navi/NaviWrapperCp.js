@@ -18,6 +18,7 @@ const Wrapper = styled.div`
   align-items: center;
   text-align: center;
   @media ${media.sm} {
+    background-color: rgba(0, 0, 0, 0.5);
     display: ${(props) => (props.visibility ? 'flex' : 'none')};
     width: 100%;
     flex-direction: row;
@@ -28,13 +29,16 @@ const Wrapper = styled.div`
 
 const Bars = styled.div`
   cursor: pointer;
-  font-size: 2em;
+  font-size: 1.5em;
   position: fixed;
   z-index: 999;
   color: ${color.indigo};
   top: 0;
   display: none;
   @media ${media.sm} {
+    text-align: center;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 1);
     display: block;
   }
 `;
@@ -71,7 +75,7 @@ const NaviWrapper = () => {
   return (
     <>
       <Bars onClick={onClick}>
-        <i className="fa fa-bars"></i>
+        <i className="fa fa-bars"></i>&nbsp;&nbsp;Navi
       </Bars>
       <Wrapper visibility={visibility}>
         <LogoCp />

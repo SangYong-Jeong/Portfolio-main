@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 const Wrapper = styled.li`
   margin-bottom: 2em;
   @media ${media.sm} {
+    color: ${color.white};
     font-family: ${font.title};
     font-size: 1.25em;
     margin-bottom: 0;

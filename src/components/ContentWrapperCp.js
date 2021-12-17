@@ -15,11 +15,15 @@ const Wrapper = styled.div`
   @media ${media.sm} {
     width: 100%;
     margin-left: 0;
+    margin-top: 25px;
   }
 `;
 
 const Wrap = styled.div`
   padding: 0 1em;
+  @media ${media.sm} {
+    padding: 0 0.125em;
+  }
 `;
 
 const ContentWrapperCp = () => {

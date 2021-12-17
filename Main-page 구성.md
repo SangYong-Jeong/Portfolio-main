@@ -30,8 +30,9 @@
 1. 컴포넌트들 AOS로 animation 효과 주기 -> 완료 (aos animation 한 번 적용후 적용
    안되게도 처리 완료)
 2. 반응형 처리 -> 완료
-3. Top Button 추가
+3. Top Button 추가 -> + 반응형 부분까지 수정완료
 4. 프로필 사진 -> 이력서 사진으로 change 필요(다 끝났을때)
-5. firebase에 배포후 이력서 Portfolio란에 추가
+5. 빌드
+6. firebase에 배포후 이력서 Portfolio란에 추가
 
 - data-aos-once: true 값줘서 한번 실행후 다시 실행되지 않게 하기

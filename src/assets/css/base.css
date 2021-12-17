@@ -105,3 +105,13 @@ a {
 .slick-next {
   display: none;
 }
+
+.btn-dark.focus,
+.btn-dark:focus {
+  box-shadow: none;
+}
+
+.btn.focus,
+.btn:focus {
+  box-shadow: none;
+}

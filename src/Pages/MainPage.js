@@ -3,6 +3,7 @@ import styled, { media } from '../style';
 
 import NaviWrapper from '../components/navi/NaviWrapperCp';
 import ContentWrapperCp from '../components/ContentWrapperCp';
+import TopButtonCp from '../components/common/TopButtonCp';
 
 const Wrapper = styled.div`
   max-width: 1170px;
@@ -19,6 +20,7 @@ const Main = () => {
     <Wrapper>
       <NaviWrapper />
       <ContentWrapperCp />
+      <TopButtonCp />
     </Wrapper>
   );
 };

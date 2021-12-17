@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import styled, { font, media } from '../../style';
+import styled, { font, media, color } from '../../style';
 import { useDispatch } from 'react-redux';
 import { hide } from '../../modules/media';
 
@@ -18,6 +18,7 @@ const Wrapper = styled.ul`
 `;
 
 const Close = styled.div`
+  color: ${color.white};
   cursor: pointer;
   font-size: 1.5em;
   display: none;
