@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import styled, { font, color } from '../../style';
+import { useDispatch } from 'react-redux';
+import { contact } from '../../modules/height';
 
 import ContactCp from './ContactCp';
 
@@ -39,7 +41,7 @@ const datas = [
     margin: true,
     aos: {
       aos: 'fade-left',
-      offset: '700',
+      offset: '500',
       duration: '1000',
     },
   },
@@ -50,7 +52,7 @@ const datas = [
     margin: false,
     aos: {
       aos: 'fade-right',
-      offset: '700',
+      offset: '500',
       duration: '1000',
     },
   },
@@ -61,7 +63,7 @@ const datas = [
     margin: true,
     aos: {
       aos: 'fade-up',
-      offset: '700',
+      offset: '500',
       duration: '1000',
     },
   },
@@ -72,15 +74,24 @@ const datas = [
     margin: false,
     aos: {
       aos: 'fade-up',
-      offset: '700',
+      offset: '500',
       duration: '1000',
     },
   },
 ];
 
 const ContactWrapperCp = () => {
+  const dispatch = useDispatch();
+  const wrapper = useRef('');
+  useEffect(() => {
+    dispatch(
+      contact(
+        window.pageYOffset + wrapper.current.getBoundingClientRect().top + 300
+      )
+    );
+  }, [dispatch]);
   return (
-    <Wrapper>
+    <Wrapper ref={wrapper}>
       <AosWrap
         data-aos="fade-right"
         data-aos-offset="500"

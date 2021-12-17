@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { color, font } from '../../style';
+import styled, { color, font, media } from '../../style';
 
 const Wrapper = styled.div`
   background-color: ${color.white};
@@ -8,6 +8,9 @@ const Wrapper = styled.div`
   margin: 0 0.5em 1em 0.5em;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
   border: 2px solid ${(props) => props.color};
+  @media ${media.sm} {
+    width: 30%;
+  }
 `;
 
 const IconWrap = styled.div`

@@ -232,7 +232,9 @@ const ProjectsWrapperCp = () => {
   const wrapper = useRef('');
   useEffect(() => {
     dispatch(
-      projects(window.pageYOffset + wrapper.current.getBoundingClientRect().top)
+      projects(
+        window.pageYOffset + wrapper.current.getBoundingClientRect().top + 300
+      )
     );
   }, [dispatch]);
   return (

@@ -22,7 +22,7 @@ export const size = {
   lg: '1199px',
   md: '991px',
   sm: '767px',
-  xs: '575px',
+  xs: '616px',
 };
 
 export const media = {

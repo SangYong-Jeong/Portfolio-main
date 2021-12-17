@@ -11,6 +11,7 @@ export const projects = createAction(PROJECTS, (height) => height);
 export const contact = createAction(CONTACT, (height) => height);
 
 const initialState = {
+  main: 0,
   about: 0,
   skills: 0,
   projects: 0,

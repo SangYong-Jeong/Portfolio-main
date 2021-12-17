@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from '../../style';
+import styled, { media } from '../../style';
 
 // import Logo from '../../assets/img/증명사진.jpg';
 import Logo from '../../assets/img/marathon.png';
@@ -10,6 +10,9 @@ const ImgWrapper = styled.div`
   border-radius: 50%;
   overflow: hidden;
   margin-bottom: 2em;
+  @media ${media.sm} {
+    display: none;
+  }
 `;
 
 const LogoCp = () => {

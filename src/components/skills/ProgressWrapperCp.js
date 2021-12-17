@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from '../../style';
+import styled, { media } from '../../style';
 
 import ProgressCp from './ProgressCp';
 
@@ -23,6 +23,9 @@ const content = [
 
 const RightProgress = styled(ProgressCp)`
   margin-left: 4%;
+  @media ${media.sm} {
+    margin-left: 0;
+  }
 `;
 
 const left = {

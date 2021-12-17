@@ -1,11 +1,17 @@
 import React from 'react';
 import ProgressBar from 'react-bootstrap/ProgressBar';
-import styled, { font } from '../../style';
+import styled, { font, media } from '../../style';
 
 const Wrapper = styled.div`
   padding: 0 1%;
   width: 48%;
   margin-bottom: 1em;
+  @media ${media.sm} {
+    width: 100%;
+    margin-bottom: 0;
+    margin: 0 0 5% 0;
+    padding: 0 0;
+  }
 `;
 
 const Title = styled.h3`

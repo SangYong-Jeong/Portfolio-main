@@ -100,3 +100,8 @@ a {
   opacity: 0.75;
   color: #f9bf3f;
 }
+
+.slick-prev,
+.slick-next {
+  display: none;
+}

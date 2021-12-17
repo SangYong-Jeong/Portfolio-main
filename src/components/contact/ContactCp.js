@@ -1,7 +1,5 @@
-import React, { useRef, useEffect } from 'react';
-import styled, { color, font } from '../../style';
-import { useDispatch } from 'react-redux';
-import { contact } from '../../modules/height';
+import React from 'react';
+import styled, { color, font, media } from '../../style';
 
 const Wrapper = styled.div`
   width: 50%;
@@ -9,7 +7,9 @@ const Wrapper = styled.div`
   padding: 0 3%;
   display: flex;
   align-items: center;
-  /* margin: ${(props) => (props.margin ? '0 4% 4% 0' : '0 4% 0')}; */
+  @media ${media.sm} {
+    width: 100%;
+  }
 `;
 
 const IconWrap = styled.div`
@@ -35,17 +35,9 @@ const ContentWrap = styled.div`
 `;
 
 const ContactCp = ({ icon, content, margin, aos }) => {
-  const dispatch = useDispatch();
-  const wrapper = useRef('');
-  useEffect(() => {
-    dispatch(
-      contact(window.pageYOffset + wrapper.current.getBoundingClientRect().top)
-    );
-  }, [dispatch]);
   return (
     <Wrapper
       margin={margin}
-      ref={wrapper}
       data-aos={aos.aos}
       data-aos-offset={aos.offset}
       data-aos-duration={aos.duration}

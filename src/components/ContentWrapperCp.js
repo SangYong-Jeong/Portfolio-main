@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from '../style';
+import styled, { media } from '../style';
 
 import BannerWrapperCp from './main/BannerWrapperCp';
 import AboutCp from './about/AboutCp';
@@ -12,6 +12,10 @@ const Wrapper = styled.div`
   width: calc(100% - 300px);
   margin-left: 300px;
   background-color: #f7f7f7;
+  @media ${media.sm} {
+    width: 100%;
+    margin-left: 0;
+  }
 `;
 
 const Wrap = styled.div`

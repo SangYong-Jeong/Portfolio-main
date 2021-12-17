@@ -1,10 +1,14 @@
 import React from 'react';
-import styled, { color, font } from '../../style';
+import styled, { color, font, media } from '../../style';
 
 const Wrapper = styled.div`
   position: relative;
   width: 48%;
   margin: ${(props) => (props.margin ? '0 4% 5% 0' : '0 0 5% 0')};
+  @media ${media.sm} {
+    width: 100%;
+    margin: 0 0 5% 0;
+  }
 `;
 
 const ImgWrap = styled.div`

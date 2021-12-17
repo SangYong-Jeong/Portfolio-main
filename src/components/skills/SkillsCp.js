@@ -40,14 +40,16 @@ const SkillsCp = () => {
   const wrapper = useRef('');
   useEffect(() => {
     dispatch(
-      skills(window.pageYOffset + wrapper.current.getBoundingClientRect().top)
+      skills(
+        window.pageYOffset + wrapper.current.getBoundingClientRect().top + 320
+      )
     );
   }, [dispatch]);
   return (
     <Wrapper ref={wrapper}>
       <AosWrap
         data-aos="fade-right"
-        data-aos-offset="1000"
+        data-aos-offset="800"
         data-aos-duration="1000"
       >
         <Index>TECH SKILLS</Index>

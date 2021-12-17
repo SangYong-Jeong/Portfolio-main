@@ -65,7 +65,9 @@ const AboutCp = () => {
   const wrapper = useRef('');
   useEffect(() => {
     dispatch(
-      about(window.pageYOffset + wrapper.current.getBoundingClientRect().top)
+      about(
+        window.pageYOffset + wrapper.current.getBoundingClientRect().top + 400
+      )
     );
   }, [dispatch]);
   return (

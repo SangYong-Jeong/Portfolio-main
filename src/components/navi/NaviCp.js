@@ -1,10 +1,21 @@
 import React, { useCallback } from 'react';
-import styled, { color } from '../../style';
+import styled, { color, media, font } from '../../style';
 import { useSelector } from 'react-redux';
 
 const Wrapper = styled.li`
   margin-bottom: 2em;
-  font
+  @media ${media.sm} {
+    font-family: ${font.title};
+    font-size: 1.25em;
+    margin-bottom: 0;
+    margin-right: 2em;
+  }
+  @media ${media.xs} {
+    font-family: ${font.title};
+    font-size: 1em;
+    margin-bottom: 0;
+    margin-right: 2em;
+  }
 `;
 const Navi = styled.a`
   position: relative;
