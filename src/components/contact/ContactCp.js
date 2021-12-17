@@ -34,7 +34,7 @@ const ContentWrap = styled.div`
   width: 50%;
 `;
 
-const ContactCp = ({ icon, content, margin }) => {
+const ContactCp = ({ icon, content, margin, aos }) => {
   const dispatch = useDispatch();
   const wrapper = useRef('');
   useEffect(() => {
@@ -43,7 +43,13 @@ const ContactCp = ({ icon, content, margin }) => {
     );
   }, [dispatch]);
   return (
-    <Wrapper margin={margin} ref={wrapper}>
+    <Wrapper
+      margin={margin}
+      ref={wrapper}
+      data-aos={aos.aos}
+      data-aos-offset={aos.offset}
+      data-aos-duration={aos.duration}
+    >
       <IconWrap>
         <Icon className={icon} />
       </IconWrap>

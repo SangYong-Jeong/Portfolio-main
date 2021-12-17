@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from '../style';
 
+import BannerWrapperCp from './main/BannerWrapperCp';
 import AboutCp from './about/AboutCp';
 import SkillsCp from './skills/SkillsCp';
 import ProjectsWrapperCp from './projects/ProjectsWrapperCp';
@@ -20,6 +21,7 @@ const Wrap = styled.div`
 const ContentWrapperCp = () => {
   return (
     <Wrapper>
+      <BannerWrapperCp />
       <Wrap>
         <AboutCp />
         <SkillsCp />

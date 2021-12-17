@@ -24,7 +24,14 @@ import shoppingmall from '../../assets/img/projects/React1.jpg';
 const datas = [
   {
     id: 1,
-    title: '1. PUBLISHING',
+    title: {
+      title: '1. PUBLISHING',
+      up: {
+        aos: 'fade-up',
+        offset: '500',
+        duration: '1000',
+      },
+    },
     projects: [
       {
         id: 1,
@@ -33,6 +40,11 @@ const datas = [
         margin: true,
         src: publishing1,
         domain: 'https://jsy-band.web.app',
+        aos: {
+          aos: 'fade-right',
+          offset: '700',
+          duration: '1000',
+        },
       },
       {
         id: 2,
@@ -41,6 +53,11 @@ const datas = [
         margin: false,
         src: publishing2,
         domain: 'https://jsy-br.web.app',
+        aos: {
+          aos: 'fade-left',
+          offset: '700',
+          duration: '1000',
+        },
       },
       {
         id: 3,
@@ -49,12 +66,24 @@ const datas = [
         margin: true,
         src: publishing3,
         domain: 'https://jsy-pr.web.app',
+        aos: {
+          aos: 'fade-up',
+          offset: '700',
+          duration: '1000',
+        },
       },
     ],
   },
   {
     id: 2,
-    title: '2. Node(Express.js)',
+    title: {
+      title: '2. Node(Express.js)',
+      up: {
+        aos: 'fade-up',
+        offset: '500',
+        duration: '1000',
+      },
+    },
     projects: [
       {
         id: 1,
@@ -64,6 +93,11 @@ const datas = [
         margin: true,
         src: book,
         domain: 'https://book.moongtak.com',
+        aos: {
+          aos: 'fade-right',
+          offset: '700',
+          duration: '1000',
+        },
       },
       {
         id: 2,
@@ -73,12 +107,24 @@ const datas = [
         margin: false,
         src: admin,
         domain: 'https://moongtak.com/admin',
+        aos: {
+          aos: 'fade-left',
+          offset: '700',
+          duration: '1000',
+        },
       },
     ],
   },
   {
     id: 3,
-    title: '3. Vue',
+    title: {
+      title: '3. Vue',
+      up: {
+        aos: 'fade-up',
+        offset: '500',
+        duration: '1000',
+      },
+    },
     projects: [
       {
         id: 1,
@@ -88,6 +134,11 @@ const datas = [
         margin: true,
         src: weather,
         domain: 'https://leo-weather-b8b54.web.app',
+        aos: {
+          aos: 'fade-left',
+          offset: '700',
+          duration: '1000',
+        },
       },
       {
         id: 2,
@@ -97,12 +148,24 @@ const datas = [
         margin: false,
         src: vueBook,
         domain: 'https://leo-vue-book.web.app',
+        aos: {
+          aos: 'fade-right',
+          offset: '700',
+          duration: '1000',
+        },
       },
     ],
   },
   {
     id: 4,
-    title: '4. React',
+    title: {
+      title: '4. React',
+      up: {
+        aos: 'fade-up',
+        offset: '500',
+        duration: '1000',
+      },
+    },
     projects: [
       {
         id: 1,
@@ -112,6 +175,11 @@ const datas = [
         margin: false,
         src: shoppingmall,
         domain: 'https://moongtak.com',
+        aos: {
+          aos: 'fade-right',
+          offset: '700',
+          duration: '1000',
+        },
       },
     ],
   },
@@ -121,6 +189,8 @@ const Wrapper = styled.section`
   padding: 2em;
   margin-bottom: 5em;
 `;
+
+const AosWrap = styled.div``;
 
 const Index = styled.span`
   display: inline-block;
@@ -154,6 +224,7 @@ const HighLight = styled.div`
   padding: 2em;
   background-color: ${color.primary};
   color: ${color.white};
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 `;
 
 const ProjectsWrapperCp = () => {
@@ -166,17 +237,29 @@ const ProjectsWrapperCp = () => {
   }, [dispatch]);
   return (
     <Wrapper ref={wrapper}>
-      <Index>MY WORK</Index>
-      <Title>PROJECTS</Title>
-      <ContentTitle>
-        {' '}
-        PUBLISHING &nbsp;||&nbsp; Node(Express.js) &nbsp;||&nbsp; Vue
-        &nbsp;||&nbsp; React{' '}
-      </ContentTitle>
+      <AosWrap
+        data-aos="fade-right"
+        data-aos-offset="500"
+        data-aos-duration="1000"
+      >
+        <Index>MY WORK</Index>
+        <Title>PROJECTS</Title>
+        <ContentTitle>
+          {' '}
+          PUBLISHING &nbsp;||&nbsp; Node(Express.js) &nbsp;||&nbsp; Vue
+          &nbsp;||&nbsp; React{' '}
+        </ContentTitle>
+      </AosWrap>
       {datas.map((data) => (
         <ProjectsCp key={data.id} title={data.title} projects={data.projects} />
       ))}
-      <HighLight>앞으로 더 많은 프로젝트가 추가될 예정입니다!</HighLight>
+      <HighLight
+        data-aos="fade-right"
+        data-aos-offset="500"
+        data-aos-duration="1000"
+      >
+        앞으로 더 많은 프로젝트가 추가될 예정입니다!
+      </HighLight>
     </Wrapper>
   );
 };

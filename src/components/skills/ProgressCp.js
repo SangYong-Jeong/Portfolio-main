@@ -1,6 +1,6 @@
 import React from 'react';
 import ProgressBar from 'react-bootstrap/ProgressBar';
-import styled, { color, font } from '../../style';
+import styled, { font } from '../../style';
 
 const Wrapper = styled.div`
   padding: 0 1%;
@@ -24,9 +24,14 @@ const Content = styled.p`
   line-height: 1.75;
 `;
 
-const ProgressCp = ({ title, now, color, content, className }) => {
+const ProgressCp = ({ title, now, color, content, className, aos }) => {
   return (
-    <Wrapper className={className}>
+    <Wrapper
+      className={className}
+      data-aos={aos.aos}
+      data-aos-offset={aos.offset}
+      data-aos-duration={aos.duration}
+    >
       <Title>{title}</Title>
       <StyledProgressBar animated striped now={now} variant={color} />
       <Content>&nbsp;&nbsp;{content}</Content>

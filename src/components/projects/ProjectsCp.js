@@ -22,9 +22,17 @@ const Title = styled.h3`
 `;
 
 const ProjectsCp = ({ title, projects }) => {
+  const { up } = title;
   return (
     <Wrapper>
-      <Title>{title}</Title>
+      <Title
+        color={color}
+        data-aos={up && up.aos}
+        data-aos-offset={up && up.offset}
+        data-aos-duration={up && up.duration}
+      >
+        {title.title}
+      </Title>
       <Wrap>
         {projects.map((project, i) => (
           <ProjectCp key={project.id} {...project} />

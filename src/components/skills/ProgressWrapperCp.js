@@ -25,6 +25,18 @@ const RightProgress = styled(ProgressCp)`
   margin-left: 4%;
 `;
 
+const left = {
+  aos: 'fade-left',
+  offset: '700',
+  duration: '1000',
+};
+
+const right = {
+  aos: 'fade-right',
+  offset: '700',
+  duration: '1000',
+};
+
 const ProgressWrapperCp = () => {
   return (
     <Wrapper>
@@ -33,40 +45,70 @@ const ProgressWrapperCp = () => {
         now={70}
         color="danger"
         content={content[0]}
+        aos={right}
       />
-      <RightProgress title={'CSS3'} now={70} color="" content={content[1]} />
-      <ProgressCp title={'SCSS'} now={70} color="info" content={content[2]} />
+      <RightProgress
+        title={'CSS3'}
+        now={70}
+        color=""
+        content={content[1]}
+        aos={left}
+      />
+      <ProgressCp
+        title={'SCSS'}
+        now={70}
+        color="info"
+        content={content[2]}
+        aos={right}
+      />
       <RightProgress
         title={'JavaScript'}
         now={80}
         color="warning"
         content={content[3]}
+        aos={left}
       />
       <ProgressCp
         title={'Node'}
         now={75}
         color="success"
         content={content[4]}
+        aos={left}
       />
-      <RightProgress title={'MySQL'} now={70} color="" content={content[5]} />
-      <ProgressCp title={'Vue'} now={70} color="info" content={content[6]} />
+      <RightProgress
+        title={'MySQL'}
+        now={70}
+        color=""
+        content={content[5]}
+        aos={right}
+      />
+      <ProgressCp
+        title={'Vue'}
+        now={70}
+        color="info"
+        content={content[6]}
+        aos={left}
+      />
       <RightProgress
         title={'React'}
         now={80}
         color="warning"
         content={content[7]}
+        aos={right}
       />
       <ProgressCp
         title={'Github'}
         now={60}
         color="warning"
         content={content[8]}
+        aos={left}
       />
       <RightProgress
         title={'AWS'}
         now={50}
         color="dnager"
         content={content[9]}
+        aos={right}
       />
     </Wrapper>
   );
