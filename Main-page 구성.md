@@ -32,7 +32,7 @@
 2. 반응형 처리 -> 완료
 3. Top Button 추가 -> + 반응형 부분까지 수정완료
 4. 프로필 사진 -> 이력서 사진으로 change 필요(다 끝났을때)
-5. 빌드
-6. firebase에 배포후 이력서 Portfolio란에 추가
+5. 빌드 -> 배포 완료 (Favicon 수정 하면 끝)
+6. 이력서 Portfolio란에 추가
 
 - data-aos-once: true 값줘서 한번 실행후 다시 실행되지 않게 하기
