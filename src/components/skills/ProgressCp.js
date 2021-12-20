@@ -30,9 +30,9 @@ const Content = styled.p`
   line-height: 1.75;
 `;
 
-const ProgressCp = ({ title, now, color, content, className }) => {
+const ProgressCp = ({ title, now, color, content, className, aos }) => {
   return (
-    <Wrapper className={className}>
+    <Wrapper className={className} data-aos={aos.aos}>
       <Title>{title}</Title>
       <StyledProgressBar animated striped now={now} variant={color} />
       <Content>&nbsp;&nbsp;{content}</Content>

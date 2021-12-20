@@ -34,9 +34,9 @@ const ContentWrap = styled.div`
   width: 50%;
 `;
 
-const ContactCp = ({ icon, content, margin }) => {
+const ContactCp = ({ icon, content, margin, aos }) => {
   return (
-    <Wrapper margin={margin}>
+    <Wrapper margin={margin} data-aos={aos.aos} data-aos-offset={aos.offset}>
       <IconWrap>
         <Icon className={icon} />
       </IconWrap>

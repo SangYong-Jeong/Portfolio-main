@@ -10,6 +10,8 @@ const Wrapper = styled.section`
   margin-bottom: 5em;
 `;
 
+const AosWrap = styled.div``;
+
 const Index = styled.span`
   display: inline-block;
   color: ${color.grey};
@@ -37,24 +39,40 @@ const datas = [
     icon: 'far fa-envelope',
     content: 'sangyong9501@gmail.com',
     margin: true,
+    aos: {
+      aos: 'fade-left',
+      offset: '300',
+    },
   },
   {
     id: 2,
     icon: 'fas fa-map-marker-alt',
     content: '서울시 구로구 가리봉동',
     margin: false,
+    aos: {
+      aos: 'fade-right',
+      offset: '300',
+    },
   },
   {
     id: 3,
     icon: 'fas fa-phone-alt',
     content: '+82 10 4564 9145',
     margin: true,
+    aos: {
+      aos: 'fade-up',
+      offset: '100',
+    },
   },
   {
     id: 4,
     icon: 'fab fa-github',
     content: 'https://github.com/SangYong-Jeong',
     margin: false,
+    aos: {
+      aos: 'fade-up',
+      offset: '0',
+    },
   },
 ];
 
@@ -62,16 +80,20 @@ const ContactWrapperCp = () => {
   const dispatch = useDispatch();
   const wrapper = useRef('');
   useEffect(() => {
-    dispatch(
-      contact(
-        window.pageYOffset + wrapper.current.getBoundingClientRect().top + 300
-      )
-    );
+    window.addEventListener('scroll', function () {
+      dispatch(
+        contact(
+          window.pageYOffset + wrapper.current.getBoundingClientRect().top
+        )
+      );
+    });
   }, [dispatch]);
   return (
     <Wrapper ref={wrapper}>
-      <Index>GET IN TOUCH</Index>
-      <Title>CONTACT</Title>
+      <AosWrap data-aos="fade-right">
+        <Index>GET IN TOUCH</Index>
+        <Title>CONTACT</Title>
+      </AosWrap>
       <Wrap>
         {datas.map((data) => (
           <ContactCp key={data.id} {...data} />

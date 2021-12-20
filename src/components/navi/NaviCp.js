@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useEffect, useRef } from 'react';
 import styled, { color, media, font } from '../../style';
 import { useSelector } from 'react-redux';
 

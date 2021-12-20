@@ -27,6 +27,9 @@ const datas = [
     id: 1,
     title: {
       title: '1. PUBLISHING',
+      up: {
+        aos: 'fade-up',
+      },
     },
     projects: [
       {
@@ -36,6 +39,9 @@ const datas = [
         margin: true,
         src: publishing1,
         domain: 'https://jsy-band.web.app',
+        aos: {
+          aos: 'fade-right',
+        },
       },
       {
         id: 2,
@@ -44,6 +50,9 @@ const datas = [
         margin: false,
         src: publishing2,
         domain: 'https://jsy-br.web.app',
+        aos: {
+          aos: 'fade-left',
+        },
       },
       {
         id: 3,
@@ -52,6 +61,9 @@ const datas = [
         margin: true,
         src: publishing3,
         domain: 'https://jsy-pr.web.app',
+        aos: {
+          aos: 'fade-up',
+        },
       },
     ],
   },
@@ -59,6 +71,9 @@ const datas = [
     id: 2,
     title: {
       title: '2. Node(Express.js)',
+      up: {
+        aos: 'fade-up',
+      },
     },
     projects: [
       {
@@ -69,6 +84,9 @@ const datas = [
         margin: true,
         src: book,
         domain: 'https://book.moongtak.com',
+        aos: {
+          aos: 'fade-right',
+        },
       },
       {
         id: 2,
@@ -78,6 +96,9 @@ const datas = [
         margin: false,
         src: admin,
         domain: 'https://moongtak.com/admin',
+        aos: {
+          aos: 'fade-left',
+        },
       },
     ],
   },
@@ -85,6 +106,9 @@ const datas = [
     id: 3,
     title: {
       title: '3. Vue',
+      up: {
+        aos: 'fade-up',
+      },
     },
     projects: [
       {
@@ -95,6 +119,9 @@ const datas = [
         margin: true,
         src: weather,
         domain: 'https://leo-weather-b8b54.web.app',
+        aos: {
+          aos: 'fade-left',
+        },
       },
       {
         id: 2,
@@ -104,6 +131,9 @@ const datas = [
         margin: false,
         src: vueBook,
         domain: 'https://leo-vue-book.web.app',
+        aos: {
+          aos: 'fade-right',
+        },
       },
     ],
   },
@@ -111,6 +141,9 @@ const datas = [
     id: 4,
     title: {
       title: '4. React',
+      up: {
+        aos: 'fade-up',
+      },
     },
     projects: [
       {
@@ -121,6 +154,9 @@ const datas = [
         margin: true,
         src: shoppingmall,
         domain: 'https://moongtak.com',
+        aos: {
+          aos: 'fade-right',
+        },
       },
       {
         id: 2,
@@ -130,6 +166,9 @@ const datas = [
         margin: false,
         src: search,
         domain: 'https://jsy-search-app.web.app/',
+        aos: {
+          aos: 'fade-left',
+        },
       },
     ],
   },
@@ -181,21 +220,25 @@ const ProjectsWrapperCp = () => {
   const dispatch = useDispatch();
   const wrapper = useRef('');
   useEffect(() => {
-    dispatch(
-      projects(
-        window.pageYOffset + wrapper.current.getBoundingClientRect().top + 300
-      )
-    );
+    window.addEventListener('scroll', function () {
+      dispatch(
+        projects(
+          window.pageYOffset + wrapper.current.getBoundingClientRect().top
+        )
+      );
+    });
   }, [dispatch]);
   return (
     <Wrapper ref={wrapper}>
-      <Index>MY WORK</Index>
-      <Title>PROJECTS</Title>
-      <ContentTitle>
-        {' '}
-        PUBLISHING &nbsp;||&nbsp; Node(Express.js) &nbsp;||&nbsp; Vue
-        &nbsp;||&nbsp; React{' '}
-      </ContentTitle>
+      <AosWrap data-aos="fade-right">
+        <Index>MY WORK</Index>
+        <Title>PROJECTS</Title>
+        <ContentTitle>
+          {' '}
+          PUBLISHING &nbsp;||&nbsp; Node(Express.js) &nbsp;||&nbsp; Vue
+          &nbsp;||&nbsp; React{' '}
+        </ContentTitle>
+      </AosWrap>
       {datas.map((data) => (
         <ProjectsCp key={data.id} title={data.title} projects={data.projects} />
       ))}
