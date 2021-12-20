@@ -27,14 +27,9 @@ const Content = styled.h3`
   margin-bottom: 2em;
 `;
 
-const AboutSkillCp = ({ type, color, content, aos }) => {
+const AboutSkillCp = ({ type, color, content }) => {
   return (
-    <Wrapper
-      color={color}
-      data-aos={aos.aos}
-      data-aos-offset={aos.offset}
-      data-aos-duration={aos.duration}
-    >
+    <Wrapper color={color}>
       <IconWrap>
         {type === 'database' ? (
           <Icon color={color} className={`fas fa-${type}`}></Icon>

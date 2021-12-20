@@ -73,14 +73,9 @@ const Span = styled.span`
   font-weight: 500;
 `;
 
-const ProjectCp = ({ title, content, src, margin, domain, aos }) => {
+const ProjectCp = ({ title, content, src, margin, domain }) => {
   return (
-    <Wrapper
-      margin={margin}
-      data-aos={aos && aos.aos}
-      data-aos-offset={aos && aos.offset}
-      data-aos-duration={aos && aos.duration}
-    >
+    <Wrapper margin={margin}>
       <ImgWrap src={src} />
       <ContentWrap>
         <ContentTitle className="content-title">{title}</ContentTitle>

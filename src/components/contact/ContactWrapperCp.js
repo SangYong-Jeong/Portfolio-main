@@ -10,8 +10,6 @@ const Wrapper = styled.section`
   margin-bottom: 5em;
 `;
 
-const AosWrap = styled.div``;
-
 const Index = styled.span`
   display: inline-block;
   color: ${color.grey};
@@ -39,44 +37,24 @@ const datas = [
     icon: 'far fa-envelope',
     content: 'sangyong9501@gmail.com',
     margin: true,
-    aos: {
-      aos: 'fade-left',
-      offset: '300',
-      duration: '1000',
-    },
   },
   {
     id: 2,
     icon: 'fas fa-map-marker-alt',
     content: '서울시 구로구 가리봉동',
     margin: false,
-    aos: {
-      aos: 'fade-right',
-      offset: '300',
-      duration: '1000',
-    },
   },
   {
     id: 3,
     icon: 'fas fa-phone-alt',
     content: '+82 10 4564 9145',
     margin: true,
-    aos: {
-      aos: 'fade-up',
-      offset: '100',
-      duration: '1000',
-    },
   },
   {
     id: 4,
     icon: 'fab fa-github',
     content: 'https://github.com/SangYong-Jeong',
     margin: false,
-    aos: {
-      aos: 'fade-up',
-      offset: '0',
-      duration: '1000',
-    },
   },
 ];
 
@@ -92,14 +70,8 @@ const ContactWrapperCp = () => {
   }, [dispatch]);
   return (
     <Wrapper ref={wrapper}>
-      <AosWrap
-        data-aos="fade-right"
-        data-aos-offset="500"
-        data-aos-duration="1000"
-      >
-        <Index>GET IN TOUCH</Index>
-        <Title>CONTACT</Title>
-      </AosWrap>
+      <Index>GET IN TOUCH</Index>
+      <Title>CONTACT</Title>
       <Wrap>
         {datas.map((data) => (
           <ContactCp key={data.id} {...data} />
