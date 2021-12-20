@@ -23,4 +23,4 @@ const LogoCp = () => {
   );
 };
 
-export default LogoCp;
+export default React.memo(LogoCp);

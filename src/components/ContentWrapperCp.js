@@ -41,4 +41,4 @@ const ContentWrapperCp = () => {
   );
 };
 
-export default ContentWrapperCp;
+export default React.memo(ContentWrapperCp);

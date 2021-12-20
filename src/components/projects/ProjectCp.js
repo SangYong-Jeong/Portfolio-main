@@ -96,4 +96,4 @@ const ProjectCp = ({ title, content, src, margin, domain, aos }) => {
   );
 };
 
-export default ProjectCp;
+export default React.memo(ProjectCp);

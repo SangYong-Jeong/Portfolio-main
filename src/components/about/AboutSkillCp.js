@@ -47,6 +47,6 @@ const AboutSkillCp = ({ type, color, content, aos }) => {
   );
 };
 
-export default AboutSkillCp;
+export default React.memo(AboutSkillCp);
 
 // border-bottom 색깔은 props로

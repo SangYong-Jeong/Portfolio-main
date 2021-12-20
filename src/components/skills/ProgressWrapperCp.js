@@ -117,6 +117,6 @@ const ProgressWrapperCp = () => {
   );
 };
 
-export default ProgressWrapperCp;
+export default React.memo(ProgressWrapperCp);
 // yarn bootstrap module 이용해서 progress bar 구현
 // variant => success, info, danger, warning

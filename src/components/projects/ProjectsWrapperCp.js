@@ -20,6 +20,7 @@ import vueBook from '../../assets/img/projects/Vue-도서관리.jpg';
 
 /* React */
 import shoppingmall from '../../assets/img/projects/React1.jpg';
+import search from '../../assets/img/projects/ReactSearch.jpg';
 
 const datas = [
   {
@@ -172,11 +173,25 @@ const datas = [
         title: 'React 쇼핑몰 페이지',
         content:
           'React를 활용한 쇼핑몰 페이지 구현, Redux/toolkit을 활용해 쇼핑몰 관리자 페이지의 api router에서 보내주는 data 이용해 프론트에서 data handling하는 시스템 구현',
-        margin: false,
+        margin: true,
         src: shoppingmall,
         domain: 'https://moongtak.com',
         aos: {
           aos: 'fade-right',
+          offset: '700',
+          duration: '1000',
+        },
+      },
+      {
+        id: 2,
+        title: 'React로 만든 검색 앱',
+        content:
+          'React를 활용한 Search 앱 구현, 카카오 검색 API 활용해서 만든 앱, Redux 활용',
+        margin: false,
+        src: search,
+        domain: 'https://jsy-search-app.web.app/',
+        aos: {
+          aos: 'fade-left',
           offset: '700',
           duration: '1000',
         },
@@ -266,4 +281,4 @@ const ProjectsWrapperCp = () => {
   );
 };
 
-export default ProjectsWrapperCp;
+export default React.memo(ProjectsWrapperCp);

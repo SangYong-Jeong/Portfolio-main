@@ -89,4 +89,4 @@ const AboutSkillWrapperCp = () => {
   );
 };
 
-export default AboutSkillWrapperCp;
+export default React.memo(AboutSkillWrapperCp);

@@ -50,4 +50,4 @@ const NaviWrapCp = () => {
   );
 };
 
-export default NaviWrapCp;
+export default React.memo(NaviWrapCp);

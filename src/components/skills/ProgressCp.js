@@ -45,4 +45,4 @@ const ProgressCp = ({ title, now, color, content, className, aos }) => {
   );
 };
 
-export default ProgressCp;
+export default React.memo(ProgressCp);

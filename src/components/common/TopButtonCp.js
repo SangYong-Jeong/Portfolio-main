@@ -33,4 +33,4 @@ const TopButtonCp = () => {
   );
 };
 
-export default TopButtonCp;
+export default React.memo(TopButtonCp);

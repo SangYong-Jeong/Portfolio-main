@@ -42,4 +42,4 @@ const ProjectsCp = ({ title, projects }) => {
   );
 };
 
-export default ProjectsCp;
+export default React.memo(ProjectsCp);

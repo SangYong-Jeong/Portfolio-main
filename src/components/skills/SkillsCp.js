@@ -80,4 +80,4 @@ const SkillsCp = () => {
   );
 };
 
-export default SkillsCp;
+export default React.memo(SkillsCp);

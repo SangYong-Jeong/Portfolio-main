@@ -59,4 +59,4 @@ const NaviCp = ({ type, offset }) => {
   );
 };
 
-export default NaviCp;
+export default React.memo(NaviCp);

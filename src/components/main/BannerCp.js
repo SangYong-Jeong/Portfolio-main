@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { font, color } from '../../style';
+import styled from '../../style';
 
 import ContentWrapCp from './ContentWrapCp';
 
@@ -23,4 +23,4 @@ const BannerCp = ({ html, title, content, weight, src }) => {
   );
 };
 
-export default BannerCp;
+export default React.memo(BannerCp);

@@ -14,4 +14,4 @@ const FooterCp = () => {
   return <Wrapper>ⓒ copyright JSY. Allright reserved.</Wrapper>;
 };
 
-export default FooterCp;
+export default React.memo(FooterCp);

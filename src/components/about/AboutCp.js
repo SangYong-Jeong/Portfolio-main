@@ -110,4 +110,4 @@ const AboutCp = () => {
   );
 };
 
-export default AboutCp;
+export default React.memo(AboutCp);

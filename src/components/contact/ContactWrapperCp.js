@@ -109,4 +109,4 @@ const ContactWrapperCp = () => {
   );
 };
 
-export default ContactWrapperCp;
+export default React.memo(ContactWrapperCp);

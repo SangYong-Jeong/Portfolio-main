@@ -87,4 +87,4 @@ const NaviWrapper = () => {
   );
 };
 
-export default NaviWrapper;
+export default React.memo(NaviWrapper);

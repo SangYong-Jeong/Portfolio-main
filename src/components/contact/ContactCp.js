@@ -50,4 +50,4 @@ const ContactCp = ({ icon, content, margin, aos }) => {
   );
 };
 
-export default ContactCp;
+export default React.memo(ContactCp);

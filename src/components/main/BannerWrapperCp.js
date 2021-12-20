@@ -63,4 +63,4 @@ const BannerWrapperCp = () => {
   );
 };
 
-export default BannerWrapperCp;
+export default React.memo(BannerWrapperCp);

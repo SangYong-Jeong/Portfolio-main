@@ -47,4 +47,4 @@ const ContentWrapCp = ({ html, title, content, weight }) => {
   );
 };
 
-export default ContentWrapCp;
+export default React.memo(ContentWrapCp);
