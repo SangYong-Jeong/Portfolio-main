@@ -4,7 +4,7 @@ import AOS from 'aos';
 
 const App = () => {
   useEffect(() => {
-    AOS.init({ once: true, duration: 700, offset: 400 });
+    AOS.init({ once: true, duration: 700, offset: 100 });
     AOS.refresh();
     window.addEventListener('hello', function (event) {
       window.scrollTo({ top: 2, left: 0, behavior: 'smooth' });
